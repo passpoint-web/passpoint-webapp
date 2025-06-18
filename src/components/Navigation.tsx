@@ -7,7 +7,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = ['hero', 'starter-pack', 'advantage', 'onboarding', 'contact'];
+    const sections = ['hero', 'starter-pack', 'advantage', 'onboarding'];
     
     const observer = new IntersectionObserver(
       (entries) => {

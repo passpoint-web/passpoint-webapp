@@ -77,14 +77,6 @@ const Footer = () => {
                     <span className="group-hover:translate-x-1 transition-transform duration-300">Manifesto</span>
                   </a>
                 </li>
-                <li>
-                  <a 
-                    href="#contact" 
-                    className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
-                  >
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">Contact</span>
-                  </a>
-                </li>
               </ul>
             </div>
 
