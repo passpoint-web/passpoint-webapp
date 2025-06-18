@@ -51,7 +51,7 @@ const GlobalReach = () => {
                 Join African businesses already using Passpoint to expand their reach across the continent and beyond.
               </p>
               <a
-                href="https://passpoint-go-webapp.onrender.com/auth/signup"
+                href="https://go.mypasspoint.com/auth/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-white text-slate-900 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg group"
