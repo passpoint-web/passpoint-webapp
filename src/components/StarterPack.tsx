@@ -86,7 +86,7 @@ const StarterPack = () => (
       <ScrollReveal delay={600}>
         <div className="text-center mt-12 sm:mt-16 md:mt-20">
           <a
-            href="https://passpoint-go-webapp.onrender.com/auth/signup"
+            href="https://go.mypasspoint.com/auth/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 sm:px-8 py-4 sm:py-5 bg-slate-900 text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-slate-800 transition-all duration-300 hover:scale-105 shadow-lg group touch-manipulation min-h-[48px]"

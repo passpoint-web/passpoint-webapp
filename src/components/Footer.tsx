@@ -1,3 +1,4 @@
+
 import { ArrowUpRight, Youtube, Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
@@ -75,14 +76,6 @@ const Footer = () => {
                     className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-300">Manifesto</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#contact" 
-                    className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
-                  >
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">Contact</span>
                   </a>
                 </li>
               </ul>
@@ -206,7 +199,7 @@ const Footer = () => {
           <div className="border-t border-gray-700/50 mt-12 pt-6">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
               <p className="text-gray-400 text-xs">
-                © 2024 Passpoint. All rights reserved.
+                © 2025 Passpoint. All rights reserved.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
                 <a 

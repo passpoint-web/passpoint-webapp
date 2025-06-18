@@ -24,7 +24,7 @@ const StickyCTA = () => {
   };
 
   const handleGetStarted = () => {
-    window.open('https://passpoint-go-webapp.onrender.com/auth/signup', '_blank', 'noopener,noreferrer');
+    window.open('https://go.mypasspoint.com/auth/signup', '_blank', 'noopener,noreferrer');
   };
 
   if (!isVisible) return null;

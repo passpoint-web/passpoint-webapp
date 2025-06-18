@@ -7,16 +7,13 @@ const DashboardNotification = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if notification has been dismissed before
-    const isDismissed = localStorage.getItem('dashboardNotificationDismissed');
-    if (!isDismissed) {
-      setIsVisible(true);
-    }
+    // Show notification on every visit
+    setIsVisible(true);
   }, []);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('dashboardNotificationDismissed', 'true');
+    // Removed localStorage persistence - notification will show again on next visit
   };
 
   if (!isVisible) return null;
