@@ -198,7 +198,7 @@ const Footer = () => {
           <div className="border-t border-gray-700/50 mt-12 pt-6">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
               <p className="text-gray-400 text-xs">
-                © 2024 Passpoint. All rights reserved.
+                © 2025 Passpoint. All rights reserved.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
                 <a 
