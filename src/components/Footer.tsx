@@ -4,24 +4,24 @@ import ScrollReveal from "./ScrollReveal";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-12 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-16 relative overflow-hidden">
       {/* Enhanced Background decoration */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgZmlsbD0iIzMzMzMzMyIgZmlsbC1vcGFjaXR5PSIwLjAyIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMS41Ii8+CjwvZz4KPC9nPgo8L3N2Zz4=')] opacity-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
-            <div className="space-y-4 md:col-span-1">
+            <div className="space-y-6 md:col-span-1">
               <img
                 src="/lovable-uploads/b6ae95bc-73f8-4f1c-a25c-a920e93e73d6.png"
                 alt="Passpoint logo"
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
                 One API, One Africa. Connecting all national pay-in and payout methods across Africa and globally.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 <a 
                   href="https://www.youtube.com/@my_passpoint" 
                   target="_blank"
@@ -63,13 +63,13 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Company Links */}
-            <div className="space-y-4">
-              <h3 className="font-bold text-lg text-white mb-3 relative">
+            {/* Company Links with Solutions */}
+            <div className="space-y-6">
+              <h3 className="font-bold text-lg text-white mb-4 relative">
                 Company
                 <div className="absolute bottom-0 left-0 w-6 h-0.5 bg-[#00AEEF] rounded-full"></div>
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li>
                   <a 
                     href="/manifesto" 
@@ -79,6 +79,40 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+              
+              {/* Solutions Subsection */}
+              <div className="mt-8 pt-6 border-t border-gray-700/30">
+                <h4 className="font-bold text-white mb-4 text-sm relative">
+                  Solutions
+                  <div className="absolute bottom-0 left-0 w-6 h-0.5 bg-[#00AEEF] rounded-full"></div>
+                </h4>
+                <ul className="space-y-3">
+                  <li>
+                    <a 
+                      href="/card-issuing" 
+                      className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">Card Issuing</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/payment-coverage" 
+                      className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">Payment Coverage</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="/corporate-banking" 
+                      className="group text-gray-300 hover:text-[#00AEEF] transition-all duration-300 text-sm flex items-center"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">Corporate Banking</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Resources Section */}
@@ -119,11 +153,11 @@ const Footer = () => {
                   <div className="flex items-start space-x-2 p-2 rounded-lg transition-all duration-300 hover:bg-gray-800/40">
                     <Mail size={14} className="text-[#00AEEF] mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
                     <a 
-                      href="mailto:info@mypasspoint.co" 
+                      href="mailto:support@mypasspoint.com" 
                       className="text-gray-300 hover:text-[#00AEEF] transition-colors text-sm font-medium break-all"
-                      aria-label="Send email to info@mypasspoint.co"
+                      aria-label="Send email to support@mypasspoint.com"
                     >
-                      info@mypasspoint.co
+                      support@mypasspoint.com
                     </a>
                   </div>
                 </div>

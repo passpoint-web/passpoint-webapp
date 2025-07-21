@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,21 +66,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Brand colors for Passpoint
+				// Brand colors for Passpoint - Updated to match brand guide
 				brand: {
-					DEFAULT: '#009EC5',
-					50: '#E6F7FB',
-					100: '#CCF0F7',
-					200: '#99E0EF',
-					300: '#66D1E7',
-					400: '#33C1DF',
-					500: '#009EC5',
-					600: '#008AA8',
-					700: '#00758A',
-					800: '#00616D',
-					900: '#004C4F',
-					light: '#00AEEF',
-					dark: '#0080A0'
+					DEFAULT: 'hsl(194 100% 39%)',      // #009EC5 - Primary Blue
+					secondary: 'hsl(202 43% 63%)',     // #74b0cf - Secondary Blue  
+					gray: 'hsl(198 4% 55%)',           // #8A8C8E - Brand Gray
+					50: 'hsl(194 100% 96%)',
+					100: 'hsl(194 100% 92%)',
+					200: 'hsl(194 100% 84%)',
+					300: 'hsl(194 100% 76%)',
+					400: 'hsl(194 100% 58%)',
+					500: 'hsl(194 100% 39%)',          // Primary
+					600: 'hsl(194 100% 35%)',
+					700: 'hsl(194 100% 31%)',
+					800: 'hsl(194 100% 27%)',
+					900: 'hsl(194 100% 23%)',
 				}
 			},
 			borderRadius: {
@@ -101,11 +104,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
 			}
 		}
 	},

@@ -10,6 +10,7 @@ import Navigation from "@/components/Navigation";
 import ScrollToTop from "@/components/ScrollToTop";
 import TrustIndicators from "@/components/TrustIndicators";
 import DashboardNotification from "@/components/DashboardNotification";
+import SolutionsPreview from "@/components/SolutionsPreview";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <section id="starter-pack" className="scroll-mt-16"><StarterPack /></section>
         <section id="advantage" className="scroll-mt-16"><Advantage /></section>
         <TrustIndicators />
+        
         <GlobalReach />
         <section id="onboarding" className="scroll-mt-16"><Onboarding /></section>
       </main>
