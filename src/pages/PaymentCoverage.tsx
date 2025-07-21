@@ -165,6 +165,17 @@ const countries: Country[] = [
       { type: "FedNow", icon: "bank" },
       { type: "FedWire", icon: "bank" }
     ]
+  },
+  {
+    name: "China",
+    currency: "CNY",
+    flag: "🇨🇳",
+    region: "G20",
+    totalProviders: 2,
+    paymentMethods: [
+      { type: "Bank", icon: "bank" },
+      { type: "Alipay", icon: "mobile" }
+    ]
   }
 ];
 
@@ -205,8 +216,8 @@ const PaymentCoveragePage = () => {
     });
   }, [searchTerm, selectedRegion]);
 
-  const totalCountries = countries.length; // 10 countries
-  const totalPaymentMethods = 34; // 34+ payment methods across all providers
+  const totalCountries = countries.length; // 11 countries
+  const totalPaymentMethods = 36; // 36+ payment methods across all providers
   const totalCurrencies = new Set(countries.map(country => country.currency)).size; // Unique currencies
 
   return (
