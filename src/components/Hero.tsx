@@ -14,7 +14,7 @@ const logos = [
   { src: "/lovable-uploads/b1fa5e90-f050-4b07-8c01-dd5ac50cc5d4.png", alt: "Maplerad" },
   { src: "/lovable-uploads/4b52de1d-d552-468c-aef0-ea6111a57df2.png", alt: "TransFi" },
   { src: "/lovable-uploads/5aebdc7a-60a0-4ef0-a7e8-a7aaafc90014.png", alt: "Fuspay" },
-  { src: "/lovable-uploads/6fe2e531-825f-4664-b027-dedd21693eab.png", alt: "1XBET" },
+  { src: "/lovable-uploads/15a28d41-0cd0-4200-96d6-3ef3ba0445a8.png", alt: "E-Settlement" },
 ];
 
 const Hero = () => (

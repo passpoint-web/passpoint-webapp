@@ -8,7 +8,7 @@ const CustomerLogos = () => {
     { name: "AfriPay", logo: "https://via.placeholder.com/120x60/f0f0f0/666666?text=AfriPay" },
     { name: "Mobile Money Co", logo: "https://via.placeholder.com/120x60/f0f0f0/666666?text=MobileMoney" },
     { name: "Fintech Solutions", logo: "https://via.placeholder.com/120x60/f0f0f0/666666?text=FintechSol" },
-    { name: "1XBET", logo: "/lovable-uploads/e0429808-cc54-429f-b01a-f7b31321574a.png" },
+    { name: "E-Settlement", logo: "/lovable-uploads/3c9aa6da-8016-43c7-8716-c6fd36777b0b.png" },
   ];
 
   return (
