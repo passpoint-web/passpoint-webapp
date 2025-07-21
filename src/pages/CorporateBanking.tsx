@@ -313,13 +313,12 @@ const CorporateBanking = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </EnhancedButton>
               <EnhancedButton 
-                variant="outline" 
                 size="lg" 
-                className="group w-full sm:w-auto text-white border-white/30 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-white"
+                className="group w-full sm:w-auto bg-blue-600 text-white hover:bg-blue-700 relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl"
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Amopc4RAhujeNfsCm2lXMQmhWxp86FNx3j0FIy3pYzjNXn50OcuwqoAJLwgG2YZOifMxsuAJA', '_blank')}
               >
                 <span className="flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 group-hover:text-blue-300 transition-colors" />
+                  <MessageSquare className="w-5 h-5" />
                   Schedule a Demo
                 </span>
               </EnhancedButton>
