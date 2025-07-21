@@ -7,20 +7,24 @@
 
 @layer base {
   :root {
-    /* Passpoint Brand Colors */
-    --passpoint-blue: #009EC5;
-    --passpoint-blue-light: #00AEEF;
-    --passpoint-blue-dark: #0080A0;
-    --passpoint-blue-50: #E6F7FB;
-    --passpoint-blue-100: #CCF0F7;
-    --passpoint-blue-200: #99E0EF;
-    --passpoint-blue-300: #66D1E7;
-    --passpoint-blue-400: #33C1DF;
-    --passpoint-blue-500: #009EC5;
-    --passpoint-blue-600: #008AA8;
-    --passpoint-blue-700: #00758A;
-    --passpoint-blue-800: #00616D;
-    --passpoint-blue-900: #004C4F;
+    /* Passpoint Brand Colors - Updated to match brand guide */
+    --passpoint-blue: 194 100% 39%;           /* #009EC5 - Primary Blue */
+    --passpoint-blue-light: 194 100% 50%;     /* Lighter variant */
+    --passpoint-blue-dark: 194 100% 31%;      /* Darker variant */
+    --passpoint-secondary: 202 43% 63%;       /* #74b0cf - Secondary Blue */
+    --passpoint-gray: 198 4% 55%;             /* #8A8C8E - Brand Gray */
+    
+    /* Brand color scale for consistency */
+    --passpoint-blue-50: 194 100% 96%;
+    --passpoint-blue-100: 194 100% 92%;
+    --passpoint-blue-200: 194 100% 84%;
+    --passpoint-blue-300: 194 100% 76%;
+    --passpoint-blue-400: 194 100% 58%;
+    --passpoint-blue-500: 194 100% 39%;       /* Primary #009EC5 */
+    --passpoint-blue-600: 194 100% 35%;
+    --passpoint-blue-700: 194 100% 31%;
+    --passpoint-blue-800: 194 100% 27%;
+    --passpoint-blue-900: 194 100% 23%;
 
     /* Consistent Gray Scale */
     --gray-50: #FAFBFC;
@@ -72,19 +76,19 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 195 100% 39%;
+    --primary: 194 100% 39%;                  /* #009EC5 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --secondary: 202 43% 63%;                 /* #74b0cf */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 198 4% 96%;
+    --muted-foreground: 198 4% 55%;           /* Brand gray */
+    --accent: 202 43% 63%;                    /* Secondary blue */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 195 100% 39%;
+    --ring: 194 100% 39%;                     /* Primary blue */
     --radius: 0.75rem;
   }
 
@@ -95,19 +99,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 195 100% 50%;
+    --primary: 194 100% 50%;                  /* Lighter for dark mode */
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 198 4% 20%;                  /* Darker gray for dark mode */
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    --muted-foreground: 198 4% 70%;           /* Lighter brand gray */
+    --accent: 202 43% 50%;                    /* Adjusted secondary for dark mode */
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 195 100% 50%;
+    --ring: 194 100% 50%;
   }
 }
 
@@ -181,44 +185,44 @@
 
   /* Brand Color Utilities */
   .text-brand {
-    color: var(--passpoint-blue);
+    color: hsl(var(--passpoint-blue));
   }
 
   .bg-brand {
-    background-color: var(--passpoint-blue);
+    background-color: hsl(var(--passpoint-blue));
   }
 
   .border-brand {
-    border-color: var(--passpoint-blue);
+    border-color: hsl(var(--passpoint-blue));
   }
 
-  .text-brand-light {
-    color: var(--passpoint-blue-light);
+  .text-brand-secondary {
+    color: hsl(var(--passpoint-secondary));
   }
 
-  .bg-brand-light {
-    background-color: var(--passpoint-blue-light);
+  .bg-brand-secondary {
+    background-color: hsl(var(--passpoint-secondary));
   }
 
-  .text-brand-dark {
-    color: var(--passpoint-blue-dark);
+  .text-brand-gray {
+    color: hsl(var(--passpoint-gray));
   }
 
-  .bg-brand-dark {
-    background-color: var(--passpoint-blue-dark);
+  .bg-brand-gray {
+    background-color: hsl(var(--passpoint-gray));
   }
 
   /* Gradient Utilities */
   .bg-brand-gradient {
-    background: linear-gradient(135deg, var(--passpoint-blue-light), var(--passpoint-blue));
+    background: linear-gradient(135deg, hsl(var(--passpoint-blue)), hsl(var(--passpoint-secondary)));
   }
 
   .bg-brand-gradient-subtle {
-    background: linear-gradient(135deg, var(--passpoint-blue-50), var(--passpoint-blue-100));
+    background: linear-gradient(135deg, hsl(var(--passpoint-blue-50)), hsl(var(--passpoint-blue-100)));
   }
 
   .text-brand-gradient {
-    background: linear-gradient(135deg, var(--passpoint-blue-light), var(--passpoint-blue-dark));
+    background: linear-gradient(135deg, hsl(var(--passpoint-blue)), hsl(var(--passpoint-secondary)));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
