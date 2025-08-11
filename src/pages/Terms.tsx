@@ -218,12 +218,16 @@ const Terms = () => {
                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                         Bank charges
                       </li>
+                      <li className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                        SAAS fee (where applicable)
+                      </li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-3">Payment Terms</h4>
-                    <p className="text-slate-700">
-                      Fees are outlined on our Pricing Page and may be revised with minimum 5 days' notice. Settlement occurs minus applicable fees, chargebacks, and refunds.
+                     <p className="text-slate-700">
+                      Default Fees are outlined in the Pricing section of our Merchant Service Agreement (available upon request from our Business Development team) and may be revised from time to time with a minimum of five (5) days' notice. Settlement amounts will be net of applicable fees, chargebacks, and refunds. Use of Passpoint services constitutes acceptance of our standard terms, conditions, and fees, unless otherwise agreed in a signed agreement.
                     </p>
                   </div>
                 </div>
