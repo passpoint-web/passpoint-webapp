@@ -226,7 +226,7 @@ const Terms = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-3">Payment Terms</h4>
-                     <p className="text-slate-700">
+                    <p className="text-slate-700">
                       Default Fees are outlined in the Pricing section of our Merchant Service Agreement (available upon request from our Business Development team) and may be revised from time to time with a minimum of five (5) days' notice. Settlement amounts will be net of applicable fees, chargebacks, and refunds. Use of Passpoint services constitutes acceptance of our standard terms, conditions, and fees, unless otherwise agreed in a signed agreement.
                     </p>
                   </div>
