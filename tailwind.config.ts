@@ -66,11 +66,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Brand colors for Passpoint - Updated to match brand guide
+				// Enhanced Brand colors for visual variety
 				brand: {
 					DEFAULT: 'hsl(194 100% 39%)',      // #009EC5 - Primary Blue
 					secondary: 'hsl(202 43% 63%)',     // #74b0cf - Secondary Blue  
 					gray: 'hsl(198 4% 55%)',           // #8A8C8E - Brand Gray
+					purple: 'hsl(250 45% 65%)',        // Complementary purple
+					teal: 'hsl(180 25% 60%)',          // Supporting teal
+					coral: 'hsl(15 90% 70%)',          // Warm accent coral
+					emerald: 'hsl(160 85% 45%)',       // Fresh green accent
 					50: 'hsl(194 100% 96%)',
 					100: 'hsl(194 100% 92%)',
 					200: 'hsl(194 100% 84%)',

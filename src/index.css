@@ -7,12 +7,18 @@
 
 @layer base {
   :root {
-    /* Passpoint Brand Colors - Updated to match brand guide */
+    /* Passpoint Brand Colors - Enhanced with dynamic variations */
     --passpoint-blue: 194 100% 39%;           /* #009EC5 - Primary Blue */
     --passpoint-blue-light: 194 100% 50%;     /* Lighter variant */
     --passpoint-blue-dark: 194 100% 31%;      /* Darker variant */
     --passpoint-secondary: 202 43% 63%;       /* #74b0cf - Secondary Blue */
     --passpoint-gray: 198 4% 55%;             /* #8A8C8E - Brand Gray */
+    
+    /* Enhanced accent colors for visual variety */
+    --passpoint-purple: 250 45% 65%;          /* Complementary purple */
+    --passpoint-teal: 180 25% 60%;            /* Supporting teal */
+    --passpoint-coral: 15 90% 70%;            /* Warm accent coral */
+    --passpoint-emerald: 160 85% 45%;         /* Fresh green accent */
     
     /* Brand color scale for consistency */
     --passpoint-blue-50: 194 100% 96%;
@@ -25,6 +31,14 @@
     --passpoint-blue-700: 194 100% 31%;
     --passpoint-blue-800: 194 100% 27%;
     --passpoint-blue-900: 194 100% 23%;
+
+    /* Enhanced gradient variables for sections */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--passpoint-blue)) 0%, hsl(var(--passpoint-purple)) 100%);
+    --gradient-section-1: linear-gradient(135deg, hsl(var(--passpoint-blue-600)) 0%, hsl(var(--passpoint-secondary)) 100%);
+    --gradient-section-2: linear-gradient(135deg, hsl(var(--passpoint-teal)) 0%, hsl(var(--passpoint-blue-300)) 100%);
+    --gradient-section-3: linear-gradient(135deg, hsl(var(--passpoint-coral)) 0%, hsl(var(--passpoint-blue-400)) 100%);
+    --gradient-section-4: linear-gradient(135deg, hsl(var(--passpoint-emerald)) 0%, hsl(var(--passpoint-blue-500)) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--passpoint-blue-50)) 0%, hsl(var(--passpoint-blue-100)) 100%);
 
     /* Consistent Gray Scale */
     --gray-50: #FAFBFC;
@@ -43,7 +57,7 @@
     --warning: #F59E0B;
     --error: #EF4444;
     
-    /* Shadow System */
+    /* Enhanced Shadow System with color variations */
     --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -51,6 +65,9 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     --shadow-brand: 0 10px 25px -5px rgba(0, 158, 197, 0.2);
+    --shadow-purple: 0 10px 25px -5px rgba(139, 92, 246, 0.15);
+    --shadow-teal: 0 10px 25px -5px rgba(94, 151, 154, 0.15);
+    --shadow-coral: 0 10px 25px -5px rgba(251, 146, 60, 0.15);
 
     /* Spacing System (8px grid) */
     --space-xs: 0.5rem;   /* 8px */
@@ -212,21 +229,47 @@
     background-color: hsl(var(--passpoint-gray));
   }
 
-  /* Gradient Utilities */
+  /* Enhanced Gradient Utilities for Section Variety */
   .bg-brand-gradient {
-    background: linear-gradient(135deg, hsl(var(--passpoint-blue)), hsl(var(--passpoint-secondary)));
+    background: var(--gradient-hero);
+  }
+
+  .bg-section-gradient-1 {
+    background: var(--gradient-section-1);
+  }
+
+  .bg-section-gradient-2 {
+    background: var(--gradient-section-2);
+  }
+
+  .bg-section-gradient-3 {
+    background: var(--gradient-section-3);
+  }
+
+  .bg-section-gradient-4 {
+    background: var(--gradient-section-4);
   }
 
   .bg-brand-gradient-subtle {
-    background: linear-gradient(135deg, hsl(var(--passpoint-blue-50)), hsl(var(--passpoint-blue-100)));
+    background: var(--gradient-subtle);
   }
 
   .text-brand-gradient {
-    background: linear-gradient(135deg, hsl(var(--passpoint-blue)), hsl(var(--passpoint-secondary)));
+    background: var(--gradient-hero);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Accent color utilities */
+  .text-accent-purple { color: hsl(var(--passpoint-purple)); }
+  .bg-accent-purple { background-color: hsl(var(--passpoint-purple)); }
+  .text-accent-teal { color: hsl(var(--passpoint-teal)); }
+  .bg-accent-teal { background-color: hsl(var(--passpoint-teal)); }
+  .text-accent-coral { color: hsl(var(--passpoint-coral)); }
+  .bg-accent-coral { background-color: hsl(var(--passpoint-coral)); }
+  .text-accent-emerald { color: hsl(var(--passpoint-emerald)); }
+  .bg-accent-emerald { background-color: hsl(var(--passpoint-emerald)); }
 }
 
 /* Component System */
