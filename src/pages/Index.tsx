@@ -9,7 +9,7 @@ import StickyCTA from "@/components/StickyCTA";
 import Navigation from "@/components/Navigation";
 import ScrollToTop from "@/components/ScrollToTop";
 import TrustIndicators from "@/components/TrustIndicators";
-import DashboardNotification from "@/components/DashboardNotification";
+
 import SolutionsPreview from "@/components/SolutionsPreview";
 
 const Index = () => {
@@ -30,7 +30,7 @@ const Index = () => {
       <Footer />
       <StickyCTA />
       <ScrollToTop />
-      <DashboardNotification />
+      
     </div>
   );
 };
