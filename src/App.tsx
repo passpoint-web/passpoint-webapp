@@ -13,6 +13,11 @@ import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import CardIssuing from "./pages/CardIssuing";
 import CorporateBanking from "./pages/CorporateBanking";
+import PressMediaResources from "./pages/PressMediaResources";
+import News from "./pages/News";
+import ProductImages from "./pages/ProductImages";
+import BrandGuidelines from "./pages/BrandGuidelines";
+import PressReleaseDetail from "./pages/PressReleaseDetail";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +34,11 @@ const App = () => (
           <Route path="/payment-coverage" element={<PaymentCoverage />} />
           <Route path="/card-issuing" element={<CardIssuing />} />
           <Route path="/corporate-banking" element={<CorporateBanking />} />
+          <Route path="/press-media" element={<PressMediaResources />} />
+          <Route path="/press-media/news" element={<News />} />
+          <Route path="/press-media/news/:slug" element={<PressReleaseDetail />} />
+          <Route path="/press-media/product-images" element={<ProductImages />} />
+          <Route path="/press-media/brand-guidelines" element={<BrandGuidelines />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

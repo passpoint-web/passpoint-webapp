@@ -6,6 +6,7 @@ const Navigation = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
 
   useEffect(() => {
     const sections = ['hero', 'starter-pack', 'advantage', 'onboarding'];
@@ -100,12 +101,40 @@ const Navigation = () => {
               </div>
             )}
           </div>
-          <a
-            href="/manifesto"
-            className="px-3 py-2 text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors touch-manipulation"
-          >
-            Manifesto
-          </a>
+          
+          {/* Company Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setCompanyDropdownOpen(!companyDropdownOpen)}
+              onMouseEnter={() => setCompanyDropdownOpen(true)}
+              className="px-3 py-2 text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors touch-manipulation flex items-center gap-1"
+            >
+              Company <ChevronDown size={14} />
+            </button>
+            {companyDropdownOpen && (
+              <div 
+                className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-slate-200 z-50"
+                onMouseLeave={() => setCompanyDropdownOpen(false)}
+              >
+                <div className="py-2">
+                  <a
+                    href="/manifesto"
+                    className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  >
+                    <div className="font-medium">Manifesto</div>
+                    <div className="text-xs text-slate-500">Our vision for Africa's payment infrastructure</div>
+                  </a>
+                  <a
+                    href="/press-media"
+                    className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  >
+                    <div className="font-medium">Press & Media Resources</div>
+                    <div className="text-xs text-slate-500">News, updates, and media assets</div>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
           <a
             href="https://go.mypasspoint.com/"
             target="_blank"
@@ -173,13 +202,26 @@ const Navigation = () => {
                     <div className="text-xs text-slate-500">Manage global finance from one point</div>
                   </a>
                 </div>
-                <a
-                  href="/manifesto"
-                  className="block py-4 px-4 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors touch-manipulation"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Manifesto
-                </a>
+                
+                <div className="border-b border-slate-200 pb-4">
+                  <h3 className="px-4 py-2 text-sm font-semibold text-slate-900">Company</h3>
+                  <a
+                    href="/manifesto"
+                    className="block py-3 px-4 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors touch-manipulation"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="font-medium">Manifesto</div>
+                    <div className="text-xs text-slate-500">Our vision for Africa's payment infrastructure</div>
+                  </a>
+                  <a
+                    href="/press-media"
+                    className="block py-3 px-4 text-sm text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors touch-manipulation"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="font-medium">Press & Media Resources</div>
+                    <div className="text-xs text-slate-500">News, updates, and media assets</div>
+                  </a>
+                </div>
                 <a
                   href="https://go.mypasspoint.com/"
                   target="_blank"
