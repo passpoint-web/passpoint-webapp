@@ -23,9 +23,11 @@ interface Country {
   region: string;
   paymentMethods: PaymentMethod[];
   totalProviders: number;
+  providerLabel?: 'banks' | 'providers';
 }
 
 const countries: Country[] = [
+  // West Africa
   {
     name: "Nigeria",
     currency: "NGN",
@@ -38,34 +40,18 @@ const countries: Country[] = [
     ]
   },
   {
-    name: "Kenya", 
-    currency: "KES",
-    flag: "🇰🇪",
-    region: "East Africa",
+    name: "Senegal", 
+    currency: "XOF",
+    flag: "🇸🇳",
+    region: "West Africa",
     totalProviders: 4,
     paymentMethods: [
       { type: "Mobile Money", providers: [
-        { name: "Mpesa", logo: "/lovable-uploads/884accdd-b3fc-411d-9765-9c6ebb5a260e.png" },
-        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
-        { name: "Tkash", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" }
-      ], icon: "mobile" },
-      { type: "Bank Payouts", icon: "bank" }
-    ]
-  },
-  {
-    name: "Tanzania",
-    currency: "TZS", 
-    flag: "🇹🇿",
-    region: "East Africa",
-    totalProviders: 5,
-    paymentMethods: [
-      { type: "Mobile Money", providers: [
-        { name: "Tigo", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" },
-        { name: "Vodafone", logo: "/lovable-uploads/bb111226-ef34-4d69-bf76-b70a41de0761.png" },
-        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
-        { name: "Halotel", logo: "/lovable-uploads/2410642c-8ded-4033-bedf-c3304538943f.png" }
-      ], icon: "mobile" },
-      { type: "Bank Payouts", icon: "bank" }
+        { name: "Wave", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" },
+        { name: "Xpress", logo: "/lovable-uploads/d0a2baf6-49d3-4763-bb86-2bd10967364f.png" },
+        { name: "Orange", logo: "/lovable-uploads/81041c88-7452-46ef-b44e-2b8e49acc3f6.png" },
+        { name: "Free", logo: "/lovable-uploads/8ac429f9-bf4c-4f07-91d0-cccc9fac1b22.png" }
+      ], icon: "mobile" }
     ]
   },
   {
@@ -93,21 +79,6 @@ const countries: Country[] = [
       { type: "Mobile Money", providers: [
         { name: "MTN", logo: "/lovable-uploads/906683fe-c2ee-45be-a1f9-b788eb81ff38.png" },
         { name: "CELTIS", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" }
-      ], icon: "mobile" }
-    ]
-  },
-  {
-    name: "Senegal", 
-    currency: "XOF",
-    flag: "🇸🇳",
-    region: "West Africa",
-    totalProviders: 4,
-    paymentMethods: [
-      { type: "Mobile Money", providers: [
-        { name: "Wave", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" },
-        { name: "Xpress", logo: "/lovable-uploads/d0a2baf6-49d3-4763-bb86-2bd10967364f.png" },
-        { name: "Orange", logo: "/lovable-uploads/81041c88-7452-46ef-b44e-2b8e49acc3f6.png" },
-        { name: "Free", logo: "/lovable-uploads/8ac429f9-bf4c-4f07-91d0-cccc9fac1b22.png" }
       ], icon: "mobile" }
     ]
   },
@@ -152,6 +123,353 @@ const countries: Country[] = [
       ], icon: "mobile" }
     ]
   },
+
+  // East Africa
+  {
+    name: "Kenya", 
+    currency: "KES",
+    flag: "🇰🇪",
+    region: "East Africa",
+    totalProviders: 4,
+    paymentMethods: [
+      { type: "Mobile Money", providers: [
+        { name: "Mpesa", logo: "/lovable-uploads/884accdd-b3fc-411d-9765-9c6ebb5a260e.png" },
+        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
+        { name: "Tkash", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" }
+      ], icon: "mobile" },
+      { type: "Bank Payouts", icon: "bank" }
+    ]
+  },
+  {
+    name: "Tanzania",
+    currency: "TZS", 
+    flag: "🇹🇿",
+    region: "East Africa",
+    totalProviders: 5,
+    paymentMethods: [
+      { type: "Mobile Money", providers: [
+        { name: "Tigo", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" },
+        { name: "Vodafone", logo: "/lovable-uploads/bb111226-ef34-4d69-bf76-b70a41de0761.png" },
+        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
+        { name: "Halotel", logo: "/lovable-uploads/2410642c-8ded-4033-bedf-c3304538943f.png" }
+      ], icon: "mobile" },
+      { type: "Bank Payouts", icon: "bank" }
+    ]
+  },
+
+  // Europe
+  {
+    name: "Austria",
+    currency: "EUR",
+    flag: "🇦🇹",
+    region: "Europe",
+    totalProviders: 17,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Belgium",
+    currency: "EUR",
+    flag: "🇧🇪",
+    region: "Europe",
+    totalProviders: 15,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Bulgaria",
+    currency: "EUR",
+    flag: "🇧🇬",
+    region: "Europe",
+    totalProviders: 1,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Switzerland",
+    currency: "EUR",
+    flag: "🇨🇭",
+    region: "Europe",
+    totalProviders: 3,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Denmark",
+    currency: "DKK",
+    flag: "🇩🇰",
+    region: "Europe",
+    totalProviders: 45,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Estonia",
+    currency: "EUR",
+    flag: "🇪🇪",
+    region: "Europe",
+    totalProviders: 6,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Spain",
+    currency: "EUR",
+    flag: "🇪🇸",
+    region: "Europe",
+    totalProviders: 52,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Finland",
+    currency: "EUR",
+    flag: "🇫🇮",
+    region: "Europe",
+    totalProviders: 14,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Hungary",
+    currency: "EUR",
+    flag: "🇭🇺",
+    region: "Europe",
+    totalProviders: 5,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Ireland",
+    currency: "EUR",
+    flag: "🇮🇪",
+    region: "Europe",
+    totalProviders: 8,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Lithuania",
+    currency: "EUR",
+    flag: "🇱🇹",
+    region: "Europe",
+    totalProviders: 6,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Luxembourg",
+    currency: "EUR",
+    flag: "🇱🇺",
+    region: "Europe",
+    totalProviders: 5,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Latvia",
+    currency: "EUR",
+    flag: "🇱🇻",
+    region: "Europe",
+    totalProviders: 8,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Netherlands",
+    currency: "EUR",
+    flag: "🇳🇱",
+    region: "Europe",
+    totalProviders: 17,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Norway",
+    currency: "EUR",
+    flag: "🇳🇴",
+    region: "Europe",
+    totalProviders: 94,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Poland",
+    currency: "PLN",
+    flag: "🇵🇱",
+    region: "Europe",
+    totalProviders: 19,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Portugal",
+    currency: "EUR",
+    flag: "🇵🇹",
+    region: "Europe",
+    totalProviders: 23,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Romania",
+    currency: "EUR",
+    flag: "🇷🇴",
+    region: "Europe",
+    totalProviders: 8,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Sweden",
+    currency: "SEK",
+    flag: "🇸🇪",
+    region: "Europe",
+    totalProviders: 69,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Slovakia",
+    currency: "EUR",
+    flag: "🇸🇰",
+    region: "Europe",
+    totalProviders: 4,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+
+  // G20 Countries  
+  {
+    name: "Germany",
+    currency: "EUR",
+    flag: "🇩🇪",
+    region: "G20",
+    totalProviders: 1200,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "France",
+    currency: "EUR",
+    flag: "🇫🇷",
+    region: "G20",
+    totalProviders: 98,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Italy",
+    currency: "EUR",
+    flag: "🇮🇹",
+    region: "G20",
+    totalProviders: 89,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "China",
+    currency: "CNY",
+    flag: "🇨🇳",
+    region: "G20",
+    totalProviders: 2,
+    paymentMethods: [
+      { type: "Bank", icon: "bank" },
+      { type: "Alipay", icon: "mobile" }
+    ]
+  },
   {
     name: "USA",
     currency: "USD",
@@ -165,21 +483,10 @@ const countries: Country[] = [
       { type: "FedNow", icon: "bank" },
       { type: "FedWire", icon: "bank" }
     ]
-  },
-  {
-    name: "China",
-    currency: "CNY",
-    flag: "🇨🇳",
-    region: "G20",
-    totalProviders: 2,
-    paymentMethods: [
-      { type: "Bank", icon: "bank" },
-      { type: "Alipay", icon: "mobile" }
-    ]
   }
 ];
 
-const regions = ["All Regions", "West Africa", "East Africa", "G20"];
+const regions = ["All Regions", "West Africa", "East Africa", "G20", "Europe"];
 
 const getPaymentIcon = (iconType: string) => {
   switch (iconType) {
@@ -216,9 +523,9 @@ const PaymentCoveragePage = () => {
     });
   }, [searchTerm, selectedRegion]);
 
-  const totalCountries = countries.length; // 11 countries
-  const totalPaymentMethods = 36; // 36+ payment methods across all providers
-  const totalCurrencies = new Set(countries.map(country => country.currency)).size; // Unique currencies
+  const totalCountries = countries.length;
+  const totalPaymentMethods = 36 + 3; // African methods + 3 European regional methods (Open Banking, SEPA, SEPA Instant)
+  const totalCurrencies = new Set(countries.map(country => country.currency)).size;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -231,10 +538,10 @@ const PaymentCoveragePage = () => {
             <div className="mb-8">
               <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-semibold">
                 <Globe className="w-4 h-4 mr-2" />
-                Unified Africa-G20 Payment Infrastructure
+                Unified Africa-Europe-G20 Payment Infrastructure
               </Badge>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Accept payments from customers across Africa and G20 countries with one simple integration. Send money anywhere, receive payments everywhere.
+                Accept payments from customers across Africa, Europe, and G20 countries with one simple integration. Send money anywhere, receive payments everywhere.
               </p>
             </div>
           </ScrollReveal>
@@ -346,9 +653,11 @@ const PaymentCoveragePage = () => {
                     <h4 className="font-semibold text-slate-900 mb-4 flex items-center gap-2">
                       <CreditCard className="h-5 w-5 text-primary" />
                       Payment Methods
-                      <Badge variant="secondary" className="ml-auto">
-                        {country.totalProviders} providers
-                      </Badge>
+                      {country.region !== "Europe" && country.region !== "G20" && (
+                        <Badge variant="secondary" className="ml-auto">
+                          {country.totalProviders} {country.providerLabel || 'providers'}
+                        </Badge>
+                      )}
                     </h4>
                     
                     <div className="space-y-4">
@@ -357,7 +666,7 @@ const PaymentCoveragePage = () => {
                           key={methodIndex}
                           className="bg-slate-50 rounded-xl p-4 hover:bg-slate-100 transition-colors duration-200"
                         >
-                          <div className="flex items-center gap-3 mb-3">
+                           <div className="flex items-center gap-3 mb-3">
                             <div className="p-2 bg-primary/10 rounded-lg text-primary">
                               {getPaymentIcon(method.icon)}
                             </div>
@@ -416,7 +725,7 @@ const PaymentCoveragePage = () => {
                   Ready to Go Global?
                 </h3>
                 <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-                  Start collecting payments across African countries and G20 markets today. One API, multiple currencies, speedy settlements.
+                  Start collecting payments across African countries, European markets, and G20 countries today. One API, multiple currencies, speedy settlements.
                 </p>
                 <a
                   href="https://go.mypasspoint.com/auth/signup"

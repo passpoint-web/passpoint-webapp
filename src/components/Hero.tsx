@@ -11,9 +11,9 @@ import FloatingElements from "./FloatingElements";
 const logos = [
   { src: "/lovable-uploads/21dd8cee-aaf4-4c74-9e14-aa314e775b53.png", alt: "PayQin" },
   { src: "/lovable-uploads/d4639335-5dfd-495e-a26f-c8e51d03e142.png", alt: "Eversend" },
-  { src: "/lovable-uploads/b1fa5e90-f050-4b07-8c01-dd5ac50cc5d4.png", alt: "Maplerad" },
+  { src: "/lovable-uploads/dlimepay-logo-large.png", alt: "Dlimepay" },
   { src: "/lovable-uploads/4b52de1d-d552-468c-aef0-ea6111a57df2.png", alt: "TransFi" },
-  { src: "/lovable-uploads/5aebdc7a-60a0-4ef0-a7e8-a7aaafc90014.png", alt: "Fuspay" },
+  { src: "/lovable-uploads/0a050f5e-0576-414f-99dd-6a577c1f4a8c.png", alt: "Graph" },
   { src: "/lovable-uploads/15a28d41-0cd0-4200-96d6-3ef3ba0445a8.png", alt: "E-Settlement" },
 ];
 
@@ -92,7 +92,7 @@ const Hero = () => (
             </div>
             <div className="text-center group bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-200/60 hover:shadow-lg hover:border-brand-200/40 transition-all duration-300 hover:-translate-y-1 sm:col-span-1 col-span-1">
               <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-800 mb-2 group-hover:text-brand-600 transition-colors duration-300">
-                <AnimatedCounter end={40} suffix="+" />
+                <AnimatedCounter end={35} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm font-bold text-gray-600 uppercase tracking-wider leading-tight">Countries</p>
             </div>
