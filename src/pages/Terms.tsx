@@ -13,6 +13,7 @@ const Terms = () => {
     { id: "fees", title: "Fees & Pricing", icon: Database },
     { id: "security", title: "Security & Fraud", icon: Lock },
     { id: "disputes", title: "Disputes & Resolution", icon: Scale },
+    { id: "uk-services", title: "UK Services", icon: FileText },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -298,8 +299,25 @@ const Terms = () => {
               </ScrollReveal>
             </div>
 
-            {/* Call to Action */}
+            {/* Services in the United Kingdom - Notice */}
             <ScrollReveal delay={1000}>
+              <section id="uk-services" className="bg-blue-50 border-l-4 border-indigo-600 rounded-xl p-6 scroll-mt-24">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center">
+                    <FileText className="text-indigo-600" size={18} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-lg font-semibold text-slate-900 mb-2">Services in the United Kingdom</h2>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      Passpoint does not actively market, promote, or advertise its services within the United Kingdom. Any UK-based business that engages with Passpoint does so on its own initiative, acknowledging that the engagement was not prompted by any targeted communication or solicitation from Passpoint or its affiliates.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </ScrollReveal>
+
+            {/* Call to Action */}
+            <ScrollReveal delay={1100}>
               <div className="text-center bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Payments?</h3>
                 <p className="text-slate-300 mb-6 max-w-2xl mx-auto">

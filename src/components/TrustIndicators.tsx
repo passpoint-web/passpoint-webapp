@@ -12,6 +12,11 @@ const TrustIndicators = () => {
       name: "Ministry of Finance Poland",
       description: "Licensed by the Republic of Poland",
       logo: "/lovable-uploads/8fdd4de7-49a9-485c-aee7-f25fff92cb1c.png"
+    },
+    {
+      name: "NDPC",
+      description: "Nigeria Data Protection Commission",
+      logo: "/lovable-uploads/ndpc-logo.png"
     }
   ];
 
@@ -33,7 +38,7 @@ const TrustIndicators = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {licenses.map((license, index) => (
               <div
                 key={index}
