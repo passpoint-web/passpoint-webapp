@@ -179,6 +179,58 @@ const countries: Country[] = [
     ]
   },
   {
+    name: "France",
+    currency: "EUR",
+    flag: "🇫🇷",
+    region: "G20",
+    totalProviders: 98,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Germany",
+    currency: "EUR",
+    flag: "🇩🇪",
+    region: "G20",
+    totalProviders: 1200,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Italy",
+    currency: "EUR",
+    flag: "🇮🇹",
+    region: "G20",
+    totalProviders: 89,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Turkey",
+    currency: "EUR",
+    flag: "🇹🇷",
+    region: "G20",
+    totalProviders: 45,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
     name: "Austria",
     currency: "EUR",
     flag: "🇦🇹",
@@ -554,6 +606,19 @@ const countries: Country[] = [
       { type: "SEPA Instant Payout", icon: "bank" },
       { type: "Open Banking (PIS)", icon: "card" }
     ]
+  },
+  {
+    name: "Turkey",
+    currency: "EUR",
+    flag: "🇹🇷",
+    region: "Europe",
+    totalProviders: 45,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
   }
 ];
 
@@ -724,7 +789,7 @@ const PaymentCoveragePage = () => {
                     <h4 className="font-semibold text-slate-900 mb-4 flex items-center gap-2">
                       <CreditCard className="h-5 w-5 text-primary" />
                       Payment Methods
-                      {country.region !== "Europe" && (
+                      {country.region !== "Europe" && country.region !== "G20" && (
                         <Badge variant="secondary" className="ml-auto">
                           {country.totalProviders} {country.providerLabel || 'providers'}
                         </Badge>
