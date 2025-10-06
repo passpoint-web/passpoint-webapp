@@ -27,6 +27,7 @@ interface Country {
 }
 
 const countries: Country[] = [
+  // West Africa
   {
     name: "Nigeria",
     currency: "NGN",
@@ -39,34 +40,18 @@ const countries: Country[] = [
     ]
   },
   {
-    name: "Kenya", 
-    currency: "KES",
-    flag: "🇰🇪",
-    region: "East Africa",
+    name: "Senegal", 
+    currency: "XOF",
+    flag: "🇸🇳",
+    region: "West Africa",
     totalProviders: 4,
     paymentMethods: [
       { type: "Mobile Money", providers: [
-        { name: "Mpesa", logo: "/lovable-uploads/884accdd-b3fc-411d-9765-9c6ebb5a260e.png" },
-        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
-        { name: "Tkash", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" }
-      ], icon: "mobile" },
-      { type: "Bank Payouts", icon: "bank" }
-    ]
-  },
-  {
-    name: "Tanzania",
-    currency: "TZS", 
-    flag: "🇹🇿",
-    region: "East Africa",
-    totalProviders: 5,
-    paymentMethods: [
-      { type: "Mobile Money", providers: [
-        { name: "Tigo", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" },
-        { name: "Vodafone", logo: "/lovable-uploads/bb111226-ef34-4d69-bf76-b70a41de0761.png" },
-        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
-        { name: "Halotel", logo: "/lovable-uploads/2410642c-8ded-4033-bedf-c3304538943f.png" }
-      ], icon: "mobile" },
-      { type: "Bank Payouts", icon: "bank" }
+        { name: "Wave", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" },
+        { name: "Xpress", logo: "/lovable-uploads/d0a2baf6-49d3-4763-bb86-2bd10967364f.png" },
+        { name: "Orange", logo: "/lovable-uploads/81041c88-7452-46ef-b44e-2b8e49acc3f6.png" },
+        { name: "Free", logo: "/lovable-uploads/8ac429f9-bf4c-4f07-91d0-cccc9fac1b22.png" }
+      ], icon: "mobile" }
     ]
   },
   {
@@ -94,21 +79,6 @@ const countries: Country[] = [
       { type: "Mobile Money", providers: [
         { name: "MTN", logo: "/lovable-uploads/906683fe-c2ee-45be-a1f9-b788eb81ff38.png" },
         { name: "CELTIS", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" }
-      ], icon: "mobile" }
-    ]
-  },
-  {
-    name: "Senegal", 
-    currency: "XOF",
-    flag: "🇸🇳",
-    region: "West Africa",
-    totalProviders: 4,
-    paymentMethods: [
-      { type: "Mobile Money", providers: [
-        { name: "Wave", logo: "/lovable-uploads/1fbcbbf5-f226-44c0-abd8-f951c3480fa5.png" },
-        { name: "Xpress", logo: "/lovable-uploads/d0a2baf6-49d3-4763-bb86-2bd10967364f.png" },
-        { name: "Orange", logo: "/lovable-uploads/81041c88-7452-46ef-b44e-2b8e49acc3f6.png" },
-        { name: "Free", logo: "/lovable-uploads/8ac429f9-bf4c-4f07-91d0-cccc9fac1b22.png" }
       ], icon: "mobile" }
     ]
   },
@@ -153,83 +123,41 @@ const countries: Country[] = [
       ], icon: "mobile" }
     ]
   },
+
+  // East Africa
   {
-    name: "USA",
-    currency: "USD",
-    flag: "🇺🇸",
-    region: "G20",
+    name: "Kenya", 
+    currency: "KES",
+    flag: "🇰🇪",
+    region: "East Africa",
+    totalProviders: 4,
+    paymentMethods: [
+      { type: "Mobile Money", providers: [
+        { name: "Mpesa", logo: "/lovable-uploads/884accdd-b3fc-411d-9765-9c6ebb5a260e.png" },
+        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
+        { name: "Tkash", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" }
+      ], icon: "mobile" },
+      { type: "Bank Payouts", icon: "bank" }
+    ]
+  },
+  {
+    name: "Tanzania",
+    currency: "TZS", 
+    flag: "🇹🇿",
+    region: "East Africa",
     totalProviders: 5,
     paymentMethods: [
-      { type: "Virtual Account", icon: "card" },
-      { type: "ACH", icon: "bank" },
-      { type: "RTP", icon: "bank" },
-      { type: "FedNow", icon: "bank" },
-      { type: "FedWire", icon: "bank" }
+      { type: "Mobile Money", providers: [
+        { name: "Tigo", logo: "/lovable-uploads/e00410e7-7539-4cfd-b092-a30870becf0c.png" },
+        { name: "Vodafone", logo: "/lovable-uploads/bb111226-ef34-4d69-bf76-b70a41de0761.png" },
+        { name: "Airtel", logo: "/lovable-uploads/692d4a26-65e5-4205-8add-bd45f0766ed7.png" },
+        { name: "Halotel", logo: "/lovable-uploads/2410642c-8ded-4033-bedf-c3304538943f.png" }
+      ], icon: "mobile" },
+      { type: "Bank Payouts", icon: "bank" }
     ]
   },
-  {
-    name: "China",
-    currency: "CNY",
-    flag: "🇨🇳",
-    region: "G20",
-    totalProviders: 2,
-    paymentMethods: [
-      { type: "Bank", icon: "bank" },
-      { type: "Alipay", icon: "mobile" }
-    ]
-  },
-  {
-    name: "France",
-    currency: "EUR",
-    flag: "🇫🇷",
-    region: "G20",
-    totalProviders: 98,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Germany",
-    currency: "EUR",
-    flag: "🇩🇪",
-    region: "G20",
-    totalProviders: 1200,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Italy",
-    currency: "EUR",
-    flag: "🇮🇹",
-    region: "G20",
-    totalProviders: 89,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Turkey",
-    currency: "EUR",
-    flag: "🇹🇷",
-    region: "G20",
-    totalProviders: 45,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
+
+  // Europe
   {
     name: "Austria",
     currency: "EUR",
@@ -275,45 +203,6 @@ const countries: Country[] = [
     flag: "🇨🇭",
     region: "Europe",
     totalProviders: 3,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Cyprus",
-    currency: "EUR",
-    flag: "🇨🇾",
-    region: "Europe",
-    totalProviders: 5,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Czech Republic",
-    currency: "EUR",
-    flag: "🇨🇿",
-    region: "Europe",
-    totalProviders: 8,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Germany",
-    currency: "EUR",
-    flag: "🇩🇪",
-    region: "Europe",
-    totalProviders: 1200,
     providerLabel: 'banks',
     paymentMethods: [
       { type: "SEPA Payout", icon: "bank" },
@@ -374,45 +263,6 @@ const countries: Country[] = [
     ]
   },
   {
-    name: "France",
-    currency: "EUR",
-    flag: "🇫🇷",
-    region: "Europe",
-    totalProviders: 98,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Greece",
-    currency: "EUR",
-    flag: "🇬🇷",
-    region: "Europe",
-    totalProviders: 8,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Croatia",
-    currency: "EUR",
-    flag: "🇭🇷",
-    region: "Europe",
-    totalProviders: 2,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
     name: "Hungary",
     currency: "EUR",
     flag: "🇭🇺",
@@ -431,19 +281,6 @@ const countries: Country[] = [
     flag: "🇮🇪",
     region: "Europe",
     totalProviders: 8,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Italy",
-    currency: "EUR",
-    flag: "🇮🇹",
-    region: "Europe",
-    totalProviders: 89,
     providerLabel: 'banks',
     paymentMethods: [
       { type: "SEPA Payout", icon: "bank" },
@@ -483,19 +320,6 @@ const countries: Country[] = [
     flag: "🇱🇻",
     region: "Europe",
     totalProviders: 8,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Malta",
-    currency: "EUR",
-    flag: "🇲🇹",
-    region: "Europe",
-    totalProviders: 4,
     providerLabel: 'banks',
     paymentMethods: [
       { type: "SEPA Payout", icon: "bank" },
@@ -570,23 +394,10 @@ const countries: Country[] = [
   },
   {
     name: "Sweden",
-    currency: "EUR",
+    currency: "SEK",
     flag: "🇸🇪",
     region: "Europe",
     totalProviders: 69,
-    providerLabel: 'banks',
-    paymentMethods: [
-      { type: "SEPA Payout", icon: "bank" },
-      { type: "SEPA Instant Payout", icon: "bank" },
-      { type: "Open Banking (PIS)", icon: "card" }
-    ]
-  },
-  {
-    name: "Slovenia",
-    currency: "EUR",
-    flag: "🇸🇮",
-    region: "Europe",
-    totalProviders: 5,
     providerLabel: 'banks',
     paymentMethods: [
       { type: "SEPA Payout", icon: "bank" },
@@ -607,17 +418,70 @@ const countries: Country[] = [
       { type: "Open Banking (PIS)", icon: "card" }
     ]
   },
+
+  // G20 Countries  
   {
-    name: "Turkey",
+    name: "Germany",
     currency: "EUR",
-    flag: "🇹🇷",
-    region: "Europe",
-    totalProviders: 45,
+    flag: "🇩🇪",
+    region: "G20",
+    totalProviders: 1200,
     providerLabel: 'banks',
     paymentMethods: [
       { type: "SEPA Payout", icon: "bank" },
       { type: "SEPA Instant Payout", icon: "bank" },
       { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "France",
+    currency: "EUR",
+    flag: "🇫🇷",
+    region: "G20",
+    totalProviders: 98,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "Italy",
+    currency: "EUR",
+    flag: "🇮🇹",
+    region: "G20",
+    totalProviders: 89,
+    providerLabel: 'banks',
+    paymentMethods: [
+      { type: "SEPA Payout", icon: "bank" },
+      { type: "SEPA Instant Payout", icon: "bank" },
+      { type: "Open Banking (PIS)", icon: "card" }
+    ]
+  },
+  {
+    name: "China",
+    currency: "CNY",
+    flag: "🇨🇳",
+    region: "G20",
+    totalProviders: 2,
+    paymentMethods: [
+      { type: "Bank", icon: "bank" },
+      { type: "Alipay", icon: "mobile" }
+    ]
+  },
+  {
+    name: "USA",
+    currency: "USD",
+    flag: "🇺🇸",
+    region: "G20",
+    totalProviders: 5,
+    paymentMethods: [
+      { type: "Virtual Account", icon: "card" },
+      { type: "ACH", icon: "bank" },
+      { type: "RTP", icon: "bank" },
+      { type: "FedNow", icon: "bank" },
+      { type: "FedWire", icon: "bank" }
     ]
   }
 ];
