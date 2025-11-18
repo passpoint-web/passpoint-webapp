@@ -28,6 +28,24 @@ const PressReleaseDetail = () => {
     // This would typically fetch from your backend API using the slug
     // For now, showing example data structure
     const mockPressReleases: Record<string, PressReleaseData> = {
+      "ubuntu-pitch-sponsorship": {
+        title: "Passpoint Charts the Future of African Sports Storytelling with Ubuntu Pitch Sponsorship",
+        headerImage: "/lovable-uploads/ubuntu-pitch-header.png",
+        category: "Sponsorship",
+        publishDate: "2025-11-17",
+        slug: "ubuntu-pitch-sponsorship",
+        content: {
+          paragraphs: [
+            "Passpoint, Africa's unified payment infrastructure provider, has reiterated its commitment to supporting and showcasing African excellence by serving as the headline sponsor of the inaugural episode of Ubuntu Pitch.",
+            "The premiere episode spotlights the illustrious career of former Ivorian international footballer Wilfried Bony and kicks off a long form documentary series that explores the journeys, challenges, and achievements of African sporting talents across the continent.",
+            "In the episode, Bony offers a candid, insider perspective on his rise as one of Africa's football heroes. Ubuntu Pitch, a global storytelling platform dedicated to revealing the human story behind sporting greatness, curates the narrative with depth and authenticity. The entire episode can be watched on youtube <a href='https://youtu.be/ev2sTzHMsVo?si=fDKexYsxP3FaFAwi' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>here</a>.",
+            "Sharing the strategic vision behind the sponsorship, Chief Executive Officer, Passpoint, Kelechi Uchegbulem said \"We are sponsoring Ubuntu Pitch because African sports stories deserve global stages. When we celebrate the journeys of our athletes, we preserve our history, elevate our identity, and ignite ambition in the next generation.",
+            "Passpoint is built on the belief that connection drives progress. With one integration powering secure and borderless payments across Africa and the G20, we help businesses move money but ultimately, we help people move forward. By supporting the first episode of Ubuntu Pitch, we are merging technology with storytelling to create opportunities, inspire possibility, and remind young Africans that their dreams can travel as far as their talent will take them.\"",
+            "Echoing this sentiment, Pascal Mbey, founder of Ubuntu Pitch said \"This sponsorship by Passpoint embodies the true spirit of Ubuntu: I am because we are. Together, we are not just sharing stories; we are building bridges. By celebrating African sportsmen and women and connecting them to platforms that unlock opportunity, we are proving that when one of us rises, we all rise.\"",
+            "Passpoint's sponsorship of the Ubuntu Pitch premiere underscores a shared mission to advance African excellence by combining technology, storytelling, and global opportunity using sport as a key catalyst. Through this collaboration, Passpoint and Ubuntu Pitch have spotlighted a legendary African athlete, elevating Wilfried Bony's inspiring story of resilience and ambition, and reinforcing their joint vision of One API, One Africa, One Goal."
+          ]
+        }
+      },
       "one-api-one-africa-francophone-corridors": {
         title: "Passpoint Advances Its \"One API, One Africa\" Agenda",
         headerImage: "/lovable-uploads/2c2bbee3-8758-423f-90b4-b2938a403093.png",
