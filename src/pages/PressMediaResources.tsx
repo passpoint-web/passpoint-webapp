@@ -67,6 +67,16 @@ const PressMediaResources = () => {
     const mockPressItems: PressItem[] = [
       {
         id: "1",
+        title: "Passpoint Charts the Future of African Sports Storytelling with Ubuntu Pitch Sponsorship",
+        excerpt: "Passpoint reiterates commitment to supporting African excellence as headline sponsor of Ubuntu Pitch's inaugural episode featuring Wilfried Bony.",
+        image: "/lovable-uploads/ubuntu-pitch-header.png",
+        date: "2025-11-17",
+        category: "Sponsorship",
+        slug: "ubuntu-pitch-sponsorship",
+        type: 'news'
+      },
+      {
+        id: "2",
         title: "Passpoint Advances Its \"One API, One Africa\" Agenda",
         excerpt: "Activates six new payment corridors for francophone West Africa",
         image: "/lovable-uploads/2c2bbee3-8758-423f-90b4-b2938a403093.png",

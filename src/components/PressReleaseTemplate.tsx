@@ -130,9 +130,11 @@ const PressReleaseTemplate = ({
               <CardContent className="p-8 md:p-12">
                 <div className="prose prose-lg max-w-none">
                   {content.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="mb-6 text-foreground leading-relaxed">
-                      {paragraph}
-                    </p>
+                    <p 
+                      key={index} 
+                      className="mb-6 text-foreground leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
                   ))}
                   
                   {/* Links Section */}
