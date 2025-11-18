@@ -25,6 +25,15 @@ const News = () => {
     const mockData: PressRelease[] = [
       {
         id: "1",
+        title: "Passpoint Charts the Future of African Sports Storytelling with Ubuntu Pitch Sponsorship",
+        excerpt: "Passpoint reiterates commitment to supporting African excellence as headline sponsor of Ubuntu Pitch's inaugural episode featuring Wilfried Bony.",
+        image: "/lovable-uploads/2c2bbee3-8758-423f-90b4-b2938a403093.png",
+        date: "2025-11-17",
+        category: "Sponsorship",
+        slug: "ubuntu-pitch-sponsorship"
+      },
+      {
+        id: "2",
         title: "Passpoint Announces $50M Series B Funding Round",
         excerpt: "Leading African fintech company secures major funding to expand payment infrastructure across the continent.",
         image: "/api/placeholder/600/300",
@@ -33,7 +42,7 @@ const News = () => {
         slug: "series-b-funding-announcement"
       },
       {
-        id: "2", 
+        id: "3", 
         title: "Passpoint Partners with Major Banks Across 10 African Countries",
         excerpt: "Strategic partnerships enable seamless cross-border payments and expanded merchant coverage.",
         image: "/api/placeholder/600/300",
@@ -42,7 +51,7 @@ const News = () => {
         slug: "bank-partnerships-expansion"
       },
       {
-        id: "3",
+        id: "4",
         title: "New Mobile Wallet Integration Reaches 1 Million Users",
         excerpt: "Passpoint's mobile wallet solution achieves significant milestone in user adoption.",
         image: "/api/placeholder/600/300", 
